@@ -1,0 +1,24 @@
+Origem dos merges
+
+7624cf3  (HEAD -> main, origin/main, origin/HEAD) Merge pull request #254 from StillKeepTry/patch-1
+17b63b6  Merge branch 'main' of https://github.com/microsoft/JARVIS into main
+9a6adb0  Merge pull request #228 from Wei-Zao/main
+a6368c1  Merge pull request #216 from toolboc/jetsonEmbedded
+56c7a88  Merge pull request #196 from toolboc/jetsonEmbedded
+044ba4d  Merge pull request #168 from Youplala/patch-1
+f1ad4a6  Merge pull request #159 from WangShaoyu1/patch-1
+eee74ec  Merge pull request #156 from Toubat/prompt-flow-diagram
+e7792fd  Merge pull request #34 from HardwayLinka/dev
+c37cf21  Merge branch 'microsoft:main' into dev
+61148f5  Merge pull request #52 from ErikDombi/windows-download-script
+f69d172  Merge branch 'microsoft:main' into dev
+1b73516  Merge pull request #43 from julien-c/prompt-tweaks
+e82bd1f  Merge pull request #5 from eltociear/patch-1
+6b645f2  Merge pull request #14 from EwoutH/citation-file
+902ebff  Merge pull request #25 from ManoBharathi93/patch-1
+8d4291d  Merge pull request #12 from Aryanutkarsh/main
+2eaadf3  Merge branch 'main' into main
+2f8d7c1  Merge branch 'main' into main
+62d09e4  Merge pull request #13 from 0xcha05/main
+e49148e  Merge pull request #8 from ovikk/main
+57c1443  Merge pull request #1 from tan-xu/patch-1

@@ -1,0 +1,8 @@
+Branchs do repositório
+
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/dependabot/pip/server/flask-2.3.2
+  remotes/origin/dependabot/pip/server/gradio-3.34.0
+  remotes/origin/main
+  remotes/origin/revert-124-js-es6-syntax

@@ -1,0 +1,60 @@
+//Tutorial de acesso para uso, uso da IA, StarCoder2-3b para análise do Código Jarvis
+
+//1° Etapa: Fazer login no Hugging Face e procurar pela IA desejada, nesse caso estaremos utilizando a StarCoder2-3b
+//2° Etapa: Ao selecionar o StarCoder2, iremos utilizá-lo na dependência escolhida, seja no Hugging Face ou externamente, nesse caso irei utilizar o Google Colab
+//3° Etapa: Após a construção desse espaço virtual, iremos fazer uma série de passos para configurá-lo:
+
+## !pip install transformers accelerate torch
+
+//Isso instala o necessário para usar modelos do Hugging Face.
+
+## from transformers import AutoTokenizer, AutoModelForCausalLM
+## model_name = "bigcode/starcoder2-3b"
+## tokenizer = AutoTokenizer.from_pretrained(model_name)
+## model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+
+//Isso instala o Modelo StarCoder2, versão de 3B é mais leve e funciona bem no Colab, e isso também irá carregar o tokenizer e o modelo.
+
+## def comentar_codigo(codigo):
+##   prompt = f"Explique e comente detalhadamente o seguinte código Python:\n\n{codigo}\n\nComentários:"
+##   inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+##  outputs = model.generate(**inputs, max_new_tokens=300, temperature=0.4)
+##  resposta = tokenizer.decode(outputs[0], skip_special_tokens=True)
+##  print(resposta.split('Comentários:')[-1].strip())
+
+//Essa será a função responsável por comentar o código que iremos enviar.
+//E pronto, agora é possível adicionar funções dentro desse ambiente e gerar comentários sobre ela.
+
+## codigo_jarvis = """
+
+//Aqui, entre o duplo parênteses, colocaremos a função que desejamos analisar
+
+## """
+## comentar_codigo(codigo_jarvis)
+
+// Como exemplo, utilizei um trecho do código TaskExecutor: 
+class TaskExecutor:
+
+    def __init__(self, tools):
+        self.tools = tools
+
+    def execute(self, plan):
+        results = []
+        for step in plan:
+            tool = self.tools.get(step["tool"])
+            if tool:
+                result = tool.run(step["input"])
+                results.append(result)
+        return results
+// e Como resultado, ele irá retornar: 
+
+## A classe TaskExecutor é responsável por executar cada uma das subtarefas que foram previamente planejadas pelo TaskPlanner, funcionando como o estágio final do pipeline de execução dentro do fluxo geral do JARVIS.
+## A docstring inicial explica que essa classe é encarregada de processar e executar as ações definidas no plano de tarefas, embora esteja escrita de forma mínima e possa ser expandida para maior clareza.
+## O método __init__ recebe um dicionário de ferramentas e armazena esse conjunto, permitindo que cada ferramenta possa ser acessada dinamicamente durante a execução do plano.
+## A atribuição self.tools = tools garante que a instância da classe tenha acesso a todas as ferramentas disponíveis, que serão chamadas conforme descrito no plano de execução.
+## O método execute recebe um parâmetro chamado plan, que deve conter uma lista de passos estruturados, onde cada passo define qual ferramenta deve ser acionada e quais dados devem ser fornecidos como entrada.
+## A variável results é criada como uma lista vazia e servirá para acumular todos os resultados produzidos durante a execução de cada subtarefa do plano.
+## O laço for step in plan percorre cada passo do plano, assumindo que plan contém elementos estruturados como dicionários com informações sobre a ferramenta a ser utilizada.
+## A instrução tool = self.tools.get(step["tool"]) tenta recuperar a ferramenta correspondente ao nome especificado no passo, mas assume que a chave "tool" sempre existe, o que pode gerar um erro se o plano estiver malformado.
+## A verificação if tool garante que o código só tentará executar a subtarefa caso a ferramenta realmente exista no dicionário fornecido, evitando falhas imediatas caso o plano contenha alguma ferramenta desconhecida.
+## A linha result = tool.run(step["input"]) executa a subtarefa chamando o método run da ferramenta, assumindo que o passo também contenha a chave "input", o que pode ser um ponto frágil caso o plano seja inválido.

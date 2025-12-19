@@ -1,0 +1,31 @@
+7624cf3 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #254 from StillKeepTry/patch-1
+fd8d8f2 Update restbench.py
+c62e0fa clean up
+342e3b8 update data
+17b63b6 Merge branch 'main' of https://github.com/microsoft/JARVIS into main
+efec943 Update README.md
+ddeda8f update data
+8d38e28 correct gpt-4 result
+b42e7d8 correct the file
+3309ca1 Add files via upload
+7402e3b revise vicuna_easytool_retrieve
+2405c53 revise mistral_easytool_retrieve
+6659ef6 revise gpt-4_easytool_retrieve
+20876fa Add files via upload
+cbb8b0b set key
+fb836f4 fixed #231
+92985b7 Update README.md
+21c3136 Update README.md
+ce1b1f4 Add files via upload
+9a6adb0 Merge pull request #228 from Wei-Zao/main
+1b23da6 Add batch_evaluate.sh
+1fdbbf9 Update README.md
+3c29e38 update
+fbdc6c5 update
+b46ac55 update
+a6fc32a update
+7d1684a update
+4fb9822 Update README.md
+2831971 Update README.md
+ac52592 replace logo
+609566c Update README.md
