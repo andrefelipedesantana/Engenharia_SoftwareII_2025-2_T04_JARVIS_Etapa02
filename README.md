@@ -98,7 +98,8 @@ A análise automatizada com IA teve como objetivo verificar se uma **LLM** conse
 
 - **Qwen/Qwen2.5-72B-Instruct**  
 - **Meta-Llama-3-8B-Instruct**  
-- **DeepSeek-R1**  
+- **DeepSeek-R1**
+- **Google/gemma-2-9b-it**
 
 ### 🔹 Estratégia de Fornecimento de Dados
 
@@ -249,6 +250,42 @@ Grau de maturidade do processo
 
 ---
 
+### 🟠 Google/gemma-2-9b-it
+
+#### ✔️ Como Executar
+
+A análise com o modelo **google/gemma-2-9b-it** seguiu uma abordagem semelhante à do Qwen, utilizando **extração estruturada de dados do Git**, seguida de análise diretamente na **interface nativa da LLM**.
+
+**Passos:**
+
+1. Clone o repositório do projeto JARVIS localmente:
+   ```bash
+   git clone https://github.com/microsoft/JARVIS.git
+   ```
+2. Execute o script Python de extração de evidências (script.py), responsável por coletar e consolidar:
+
+- Branches remotas (git branch -r)
+
+- Tags (git tag)
+
+- Grafo de commits (git log --graph)
+
+3. O script gera um arquivo consolidado:
+
+- log.txt
+
+4. Acesse a interface HuggingChat na plataforma Hugging Face e selecione o modelo google/gemma-2-9b-it.
+
+5. Insira no chat:
+
+- O prompt de análise técnica
+
+- O conteúdo do arquivo log.txt
+
+6. A resposta é retornada automaticamente pela própria interface da LLM, sem necessidade de execução de código adicional.
+
+---
+
 ## 🔧 Infraestrutura (Ambiente de Execução)
 
 As análises com LLM foram realizadas utilizando exclusivamente a infraestrutura das próprias plataformas de IA, acessadas via navegador, sem execução em ambientes de notebook ou *cloud compute* gerenciados pelo grupo.
@@ -272,7 +309,8 @@ Esse ambiente foi utilizado para:
 
 - Qwen/Qwen2.5-72B-Instruct  
 - Meta-Llama-3-8B-Instruct  
-- DeepSeek-R1  
+- DeepSeek-R1
+- Google/gemma-2-9b-it  
 
 
 ## 📚 Relatório e Material Complementar
