@@ -1,209 +1,286 @@
-# 🧠 Atividade 1 – Padrões Arquiteturais de Software (Engenharia de Software II)
+# ⚙️ Atividade 2 – Gerência de Configuração  
+**Engenharia de Software II**
 
-Este repositório contém todos os artefatos (códigos, prompts, scripts, resultados, imagens etc.) utilizados na **Atividade 01** da disciplina de **Engenharia de Software II**.
+Este repositório contém todos os **artefatos, evidências, scripts, prompts, análises manuais e análises via Inteligência Artificial** utilizados na **Atividade 02** da disciplina de **Engenharia de Software II**.
 
-O objetivo foi **analisar os padrões arquiteturais** de um projeto de software, o **microsoft/JARVIS (HuggingGPT)**.
+O foco desta etapa foi a **análise das estratégias de Gerência de Configuração** do projeto **microsoft/JARVIS (HuggingGPT)**, com ênfase em:
+
+- Modelo de fluxo de trabalho (Branching Model)
+- Estratégia de releases
+- Uso de branches, merges, tags e histórico de commits
+- Grau de maturidade do processo de versionamento
 
 ---
 
-## 💡 Sobre o Projeto Analisado (JARVIS)
+## 💡 Projeto Analisado — JARVIS (HuggingGPT)
 
-O **JARVIS** é um sistema que funciona como uma **LLM (Modelo de Linguagem Amplo)** central.  
-Ele recebe uma tarefa, a divide em subtarefas e as encaminha para outras **LLMs especializadas**, disponíveis na plataforma **Hugging Face**.
+O **JARVIS** é um sistema baseado em **Large Language Models (LLMs)** que atua como um **orquestrador central**.  
+Ele recebe uma tarefa complexa, divide em subtarefas e as delega para **LLMs especializadas**, hospedadas na plataforma **Hugging Face**, consolidando os resultados em uma resposta final.
+
+Por se tratar de um projeto **ativo, colaborativo e de código aberto**, o JARVIS é um excelente estudo de caso para análise de **fluxos de versionamento, integração contínua e releases**.
 
 ---
 
-## 🎯 Escolha do Projeto (JARVIS)
+## 🎯 Objetivo da Atividade 2
 
-O projeto escolhido pelo grupo para realizar a análise foi o **JARVIS**.  
-Este projeto chamou a atenção devido às suas funcionalidades e objetivos, pois busca otimizar um elemento amplamente dominante no mundo atual: as **Inteligências Artificiais**.
+O objetivo desta atividade foi **analisar como o projeto JARVIS gerencia sua configuração ao longo do tempo**, respondendo principalmente às seguintes questões:
 
-O JARVIS se baseia em uma **interface central** que utiliza **serviços secundários** para realizar um processo de **especificação e refinamento** das respostas geradas pela IA — aumentando tanto a **confiabilidade** quanto a **velocidade de processamento**.
+- Qual **modelo de branching** é adotado? (GitHub Flow, Trunk-Based, Gitflow, etc.)
+- Existe uma **estratégia formal de releases**?
+- O projeto utiliza **versionamento semântico (SemVer)**?
+- Qual o **nível de maturidade** do processo de desenvolvimento?
+- Como a equipe lida com **integrações, merges e contribuições externas**?
 
-A atividade correspondente à identificação de possíveis **padrões arquiteturais** do JARVIS foi organizada da seguinte forma:
-
-- Formação de **2 duplas** e **1 quarteto**  
-- Cada grupo analisou um tipo de dado:  
-  - o **README** do projeto  
-  - o **Código-Fonte**  
-  - a **Estrutura Geral** do projeto
+Para isso, foram utilizadas **três abordagens complementares**:
+1. **Análise via LLM (Hugging Face)**
+2. **Análise Manual / Visual**
+3. **Análise Estatística**
 
 ---
 
 ## 👥 Equipe
 
-| Nº | Nome                              | Matrícula      |
-|----|-----------------------------------|----------------|
-| 01 | André Felipe de Santana Conceição | 202300061527   |
-| 02 | David Vieira Reis                 | 202100011299   |
-| 03 | Adailton Moura da Silva           | 202100011154   |
-| 04 | Enzo Emanuel Maia Costa           | 202300061901   |
-| 05 | Rafael Souza Prata                | 202300061750   |
-| 06 | João Filipe de Araújo Santos      | 202100011548   |
-| 07 | Vinicius Morais Souza             | 202200060106   |
-| 08 | Felipe Ferreira da Silva          | 202100113360   |
+| Nº | Nome                                  | Matrícula       |
+|----|--------------------------------------|-----------------|
+| 01 | André Felipe de Santana Conceição    | 202300061527    |
+| 02 | David Vieira Reis                    | 202100011299    |
+| 03 | Adailton Moura da Silva              | 202100011154    |
+| 04 | Enzo Emanuel Maia Costa              | 202300061901    |
+| 05 | Rafael Souza Prata                   | 202300061750    |
+| 06 | Vinicius Morais Souza                | 202200060106    |
+| 07 | Felipe Ferreira da Silva             | 202100113360    |
+| 08 | João Filipe de Araújo Santos Rezende | 202100011548    |
 
 ---
 
+## 🗂️ Estrutura do Repositório
 
-## 🗂️ Estrutura deste Repositório
-
-Este repositório está organizado em pastas correspondentes aos **tipos de dados analisados** (Readme, Código-Fonte e Estrutura).
-Dentro de cada pasta, há subpastas para cada aluno responsável, contendo seus artefatos de análise (códigos-fonte, prompts, notebooks, etc.).
+O repositório está organizado de acordo com os **tipos de análise realizados na Etapa 2**.
 
 ```text
-📦 Engenharia_SoftwareII_2025-2_T04_JARVIS
+📦 Engenharia_SoftwareII_2025-2_T04_JARVIS_Etapa02
 │
-├── 📂 Análise da Estrutura do Projeto/
-│   ├── 📂 Adailton Moura da Silva - 2021.../
-│   ├── 📂 David Vieira Reis - 2021.../
-│   └── 📂 Vinicius Morais Souza - 2022.../
+├── 📂 Análise de logs e evidências via IA/
+│   ├── 📂 André Felipe - 202300061527/
+│   ├── 📂 David Vieira Reis - 202100011299/
+│   ├── 📂 Rafael Souza Prata - 202300061750/
+│   └── 📂 Vinicius Morais Souza - 202200060106/
 │
-├── 📂 Análise do Código-Fonte/
-│   ├── 📂 Enzo Emanuel - 2023.../
-│   ├── 📂 Rafael Souza Prata - 2023.../ 
+├── 📂 Análise Manual/
+│   ├── 📂 Adailton Moura da Silva - 202100011154/
+│   ├── 📂 Enzo Emanuel - 202300061901/
+│   └── 📂 Felipe Ferreira - 202100113360/
+
+
 │
-├── 📂 Análise do Readme/
-│   ├── 📂 André Felipe - 2023.../
-│   └── 📂 Felipe Ferreira - 2021.../
+└── 📄 README.md
+```
+Cada pasta individual contém:
+
+- Scripts utilizados para coleta de dados  
+- Logs do Git (`git log`, `git branch`, `git tag`)  
+- Prompts enviados às LLMs  
+- Respostas das IAs  
+- Evidências textuais e visuais  
+- Análises e conclusões individuais  
+
+---
+
+## 🤖 Análise via LLM (Hugging Face)
+
+A análise automatizada com IA teve como objetivo verificar se uma **LLM** consegue identificar corretamente:
+
+- O **Branching Model**  
+- A **Estratégia de Release**  
+- Evidências técnicas no histórico do Git  
+
+### 🔹 Modelos Utilizados
+
+- **Qwen/Qwen2.5-72B-Instruct**  
+- **Meta-Llama-3-8B-Instruct**  
+- **DeepSeek-R1**  
+
+### 🔹 Estratégia de Fornecimento de Dados
+
+Foram utilizados:
+
+- `git log --graph --oneline`  
+- `git branch -r`  
+- `git tag`  
+
+Além disso, os dados foram consolidados em **arquivos `.txt`**, preparados especificamente para consumo por **LLMs**.
+
+---
+
+## 🔍 Análise Manual / Visual
+
+A análise manual foi realizada diretamente:
+
+- Pela interface do **GitHub**  
+- Pelo histórico de commits  
+- Pela estrutura de branches  
+- Pela observação da frequência de merges e integrações  
+
+Essa abordagem teve como objetivo **validar ou refutar** os resultados obtidos pelas análises via IA.
+
+---
+
+## 📊 Análise Estatística
+
+A análise estatística teve como foco:
+
+- Frequência de commits  
+- Ausência ou presença de tags  
+- Padrões de entrega contínua  
+- Identificação de possíveis estratégias de release  
+  (Continuous Delivery, Rapid Release, LTS)  
+
+Essa análise complementa as abordagens anteriores, trazendo uma **visão quantitativa** do processo.
+
+---
+
+## 📌 Conclusão Geral
+
+A partir das análises realizadas (IA, manual e estatística), foi possível concluir que o projeto **JARVIS**:
+
+- Não adota versionamento semântico formal (**SemVer**)  
+- Não utiliza **tags de release** no Git  
+- Opera majoritariamente em um fluxo **GitHub Flow / Trunk-Based**  
+- Realiza integrações frequentes diretamente na branch **`main`**  
+- Possui um nível de maturidade **moderado**, com boas práticas de colaboração, porém com oportunidades claras de melhoria em **automação, versionamento e controle de releases**  
+
+---
+
+## ▶️ Como Executar as Análises por Modelo
+
+Esta seção descreve, de forma objetiva, como cada modelo de IA foi utilizado durante a análise da gerência de configuração do projeto JARVIS.
+
+---
+
+### 🟣 Qwen/Qwen2.5-72B-Instruct
+
+#### ✔️ Como Executar
+
+Para a análise com o modelo **Qwen**, foi utilizada uma abordagem de **extração estruturada de dados**, automatizada por meio de um script em Python.
+
+**Passos:**
+
+1. Clone o repositório do projeto JARVIS localmente:
+   ```bash
+   git clone https://github.com/microsoft/JARVIS.git
+
+Execute o script Python de extração de evidências (`script.py`), que coleta:
+
+- Grafo de commits (`git log --graph --oneline`)
+- Branches remotas (`git branch -r`)
+- Tags (`git tag`)
+
+  > 📌 **Localização do Script de Extração**
+
+O arquivo `script.py`, responsável pela extração de logs e evidências do repositório, está localizado na seguinte estrutura de diretórios:
+
+```text
+📦 Engenharia_SoftwareII_2025-2_T04_JARVIS_Etapa02
 │
-└── 📄 README.md 
+├── 📂 Análise de logs e evidências via IA/
+│   ├── 📂 André Felipe - 202300061527/
+         ├── script.py 
 ```
 
-# 🛠️ Reprodutibilidade e Ambiente de Execução
+O script gera automaticamente um arquivo consolidado:
 
-Esta seção descreve a infraestrutura utilizada e as instruções necessárias para replicar as análises de IA.
+- `log_para_ia.txt`
+
+2. Acesse o **HuggingChat (Qwen)** na plataforma **Hugging Face**.
+
+3. Cole o prompt de análise junto com o conteúdo do arquivo `log_para_ia.txt`.
+
+4. Analise a resposta retornada pelo modelo, focando em:
+
+- Branching Model
+- Estratégia de Releases
+- Evidências técnicas no histórico do Git
+
+### 🟢 Meta-Llama-3-8B-Instruct
+
+#### ✔️ Como Executar
+
+1. Gere manualmente os arquivos de evidência a partir do repositório JARVIS:
+
+```bash
+git branch -a
+git log --merges --oneline --all
+git log main -n 50
+```
+2. Salve as saídas em arquivos .txt.
+
+3. Acesse a página do modelo Meta-Llama-3-8B-Instruct no Hugging Face.
+
+4. Na interface de inferência, cole:
+
+O prompt estruturado
+
+O conteúdo dos arquivos de evidência
+
+5. Avalie o resultado com base nas evidências fornecidas, sem assumir informações não observáveis.
+
+### 🔵 DeepSeek-R1
+
+#### ✔️ Como Executar
+
+1. Gere o histórico completo de commits:
+
+```bash
+git log > log.txt
+```
+2. Acesse o modelo DeepSeek-R1 no Hugging Face.
+
+3. Envie o prompt técnico junto com o conteúdo completo do arquivo log.txt.
+
+4. Solicite explicitamente que a análise seja baseada exclusivamente nas evidências observáveis.
+
+5. Utilize a resposta para avaliar:
+
+Estratégia de releases
+
+Modelo de fluxo de trabalho
+
+Grau de maturidade do processo
 
 ---
 
 ## 🔧 Infraestrutura (Ambiente de Execução)
 
-As análises foram realizadas em **dois tipos de ambiente**: nuvem (para a maioria dos modelos) e local (para o `codebert-base`).
+As análises com LLM foram realizadas utilizando exclusivamente a infraestrutura das próprias plataformas de IA, acessadas via navegador, sem execução em ambientes de notebook ou *cloud compute* gerenciados pelo grupo.
 
 ---
 
-## ☁️ Ambiente de Nuvem — Google Colab
+### ☁️ Ambiente de Nuvem — Interface Nativa das LLMs
 
-A maior parte das análises foi executada no **Google Colab** (serviço gratuito).
+A execução ocorreu diretamente nas interfaces web das LLMs, que disponibilizam inferência imediata a partir da inserção de prompts.
 
-**Especificações:**
+**Infraestrutura adotada (padrão da plataforma):**
 
-- **Serviço:** Google Colab (back-end Google Compute Engine)  
-- **GPU:** 15.0 GB de memória  
-- **RAM do Sistema:** 12.7 GB  
-- **Disco:** 112.6 GB disponíveis  
+- **Plataforma:** Hugging Face / HuggingChat  
+- **Execução:** Interface Web (Chat / Inference)  
+- **Processamento:** Infraestrutura gerenciada pelo provedor da LLM  
+- **GPU / CPU:** Gerenciada internamente pela plataforma  
+- **RAM e Disco:** Não expostos ao usuário  
+- **Configuração local:** Não necessária  
 
----
+Esse ambiente foi utilizado para:
 
-## 💻 Ambiente Local — VS Code
-
-A análise vetorial com **codebert-base** foi executada localmente.
-
-**Requisitos Mínimos:**
-
-- **Hardware:**  
-  - CPU (funciona, porém lento)  
-  - GPU com **4 GB+ de VRAM** (recomendado)  
-- **RAM do Sistema:** 16 GB recomendados  
-- **Software:**  
-  - VS Code com extensão Python  
-  - Python **3.8+**
-
----
-
-## 📌 Instruções para Execução (Como Replicar)
-
-A replicação das análises pode ser feita de duas maneiras, dependendo da abordagem utilizada pelo membro da equipe.
-
----
-
-### 1. 🟦 Análise via Interface Web (Hugging Face)
-
-Algumas análises (ex.: Rafael e Vinícius) utilizaram a interface de widget disponível na própria página do modelo no Hugging Face.
-
-**Como executar:**
-
-1. Acesse o link do modelo de IA (ex.: `meta-llama/Llama-3.1-8B-Instruct`).  
-2. Na interface **Inference**, cole o prompt e os dados de entrada (como os arquivos `.txt`).  
-3. Os tutoriais detalhados e os prompts utilizados estão nas pastas dos respectivos alunos e, também, no link do tutorial escrito que está disponpivel ao final do Readme.
-
----
-
-### 2. 🟩 Análise via Código (Google Colab)
-
-Outras análises (ex.: André, Felipe e Enzo) utilizaram código Python para executar os modelos.
-
-**Como executar:**
-
-1. Acesse a pasta do aluno neste repositório  
-   (ex.: `/Análise do Readme/André Felipe - 2023.../`).  
-2. Localize o script (`.py`) da análise e copie-o.  
-3. Abra o arquivo no **Google Colab**.
-4. Adicione um novo bloco de código e cole o script copiado.
-5. Clique em **"Executar tudo"** (`Runtime > Run all`).  
-
-O código já inclui:
-- instalação de dependências (como *transformers*),  
-- carregamento do modelo,  
-- execução completa da análise.
-
----
-
-## 3. 🖥️ Análise via Execução Local (VS Code)
-
-A análise com **codebert-base** (David, Adailton, João Felipe) foi executada localmente.
-
-### ✔️ Como executar:
-
-### 🔹 Pré-requisitos
-
-Tenha os arquivos:
-
-- `diretorios.py`
-- `dependencias.py`
-- `requirements.txt`
-
-(localizados na pasta `Análise da Estrutura do Projeto/`)
-
-E um **clone do projeto JARVIS** na sua máquina.
-
----
-
-### 🔹 Crie um Ambiente Virtual
-
-```bash
-# Windows
-python -m venv venv
-.\venv\Scripts\activate
-
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 🔹 Instale as dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### 🔹 Execute a análise
-Passe o caminho do seu clone local do JARVIS como argumento para os scripts.
-
-```bash
-python diretorios.py "C:\caminho\para\o\projeto\JARVIS"
-python dependencias.py "C:\caminho\para\o\projeto\JARVIS"
-```
-
----
-
-## 📚 Tutoriais e Relatório Final
-
-O material escrito e audiovisual contendo os tutoriais da elaboração e execução das atividades de forma detalhada para cada membro está disponível nos links a seguir:
-
-- 📄 **Tutorial Escrito (Relatório Completo):** [Acesse aqui](https://docs.google.com/document/d/1LzsOySSWbhy81r3u3X7ldHWZYF_D6ev-isXvMyRwxqQ/edit?usp=sharing)
-- 🎥 **Tutorial Gravado (Vídeo):** [Acesse aqui](https://drive.google.com/file/d/1nwgLRhP7H86so4XC7LhvmYyNlCcLmOYX/view?usp=drive_link)
+- Qwen/Qwen2.5-72B-Instruct  
+- Meta-Llama-3-8B-Instruct  
+- DeepSeek-R1  
 
 
----
+## 📚 Relatório e Material Complementar
+
+- 📄 **Relatório Completo (PDF – Etapa 2):**  
+  [Acesse aqui](https://docs.google.com/document/d/1LzsOySSWbhy81r3u3X7ldHWZYF_D6ev-isXvMyRwxqQ/edit?pli=1&tab=t.0#heading=h.35j97j8nvhs5).
+
+- 🎥 **Vídeo do Grupo:**  
+  [Acesse aqui](https://drive.google.com/file/d/1nwgLRhP7H86so4XC7LhvmYyNlCcLmOYX/view?usp=drive_link).
+
 
