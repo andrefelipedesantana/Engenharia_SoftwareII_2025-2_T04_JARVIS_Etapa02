@@ -319,6 +319,6 @@ Esse ambiente foi utilizado para:
   [Acesse aqui](https://docs.google.com/document/d/1LzsOySSWbhy81r3u3X7ldHWZYF_D6ev-isXvMyRwxqQ/edit?pli=1&tab=t.0#heading=h.35j97j8nvhs5).
 
 - 🎥 **Vídeo do Grupo:**  
-  [Acesse aqui](https://drive.google.com/file/d/1nwgLRhP7H86so4XC7LhvmYyNlCcLmOYX/view?usp=drive_link).
+  [Acesse aqui](https://drive.google.com/file/d/19Evhd5cD-QRMNasMzuHi2YwNRjpR6kMG/view?usp=sharing).
 
 
