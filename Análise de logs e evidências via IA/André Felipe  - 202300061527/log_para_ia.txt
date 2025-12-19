@@ -1,0 +1,198 @@
+
+ATUE COMO UM ENGENHEIRO DE SOFTWARE E ANALISE OS DADOS ABAIXO:
+
+1. Identifique o Branching Model (Fluxo de Trabalho) analisando o grafo e os merges.
+   (Procure por padrões como Gitflow, GitHub Flow ou Trunk-Based).
+   Cite evidências do log, como nomes de branches (ex: patch-1, dependabot).
+
+2. Identifique a Estratégia de Release (Lançamento).
+   (Verifique se existem TAGS de versão semântica ou se o fluxo é Contínuo/CD).
+
+=====================================================
+    DADOS TECNICOS EXTRAIDOS DO REPOSITORIO: JARVIS
+=====================================================
+
+[1] ESTRUTURA DE BRANCHES (git branch -r)
+origin/HEAD -> origin/main
+  origin/dependabot/pip/server/flask-2.3.2
+  origin/dependabot/pip/server/gradio-3.34.0
+  origin/main
+  origin/revert-124-js-es6-syntax
+
+-----------------------------------------------------
+
+[2] HISTORICO DE VERSOES/TAGS (git tag)
+(Nenhuma tag de versao encontrada - Output vazio)
+
+-----------------------------------------------------
+
+[3] FLUXO VISUAL / GRAFO (git log --graph --oneline)
+*   7624cf3 Merge pull request #254 from StillKeepTry/patch-1
+|\  
+| * fd8d8f2 Update restbench.py
+|/  
+* c62e0fa clean up
+* 342e3b8 update data
+*   17b63b6 Merge branch 'main' of https://github.com/microsoft/JARVIS into main
+|\  
+| * efec943 Update README.md
+| * 8d38e28 correct gpt-4 result
+| * b42e7d8 correct the file
+| * 3309ca1 Add files via upload
+| * 7402e3b revise vicuna_easytool_retrieve
+| * 2405c53 revise mistral_easytool_retrieve
+| * 6659ef6 revise gpt-4_easytool_retrieve
+| * 20876fa Add files via upload
+* | ddeda8f update data
+|/  
+* cbb8b0b set key
+* fb836f4 fixed #231
+* 92985b7 Update README.md
+* 21c3136 Update README.md
+* ce1b1f4 Add files via upload
+*   9a6adb0 Merge pull request #228 from Wei-Zao/main
+|\  
+| * 1b23da6 Add batch_evaluate.sh
+|/  
+* 1fdbbf9 Update README.md
+* 3c29e38 update
+* fbdc6c5 update
+* b46ac55 update
+* a6fc32a update
+* 7d1684a update
+* 4fb9822 Update README.md
+* 2831971 Update README.md
+* ac52592 replace logo
+* 609566c Update README.md
+* 2e6114e TaskBench
+* 2a11278 update
+*   a6368c1 Merge pull request #216 from toolboc/jetsonEmbedded
+|\  
+| * 21a1353 enable libx264 in ffmpeg
+| | * 5b9a766 Bump gradio from 3.24.1 to 3.34.0 in /server
+| |/  
+|/|   
+* | 56c7a88 Merge pull request #196 from toolboc/jetsonEmbedded
+|\| 
+| * 8ec3c4f Add NVIDIA Jetson Embedded Device Support
+* | 20030f8 Update README.md
+|/  
+* 01e4162 fixed #181
+* 67709ff Update awesome_chat.py
+| * 9c1a7f2 Bump flask from 2.2.3 to 2.3.2 in /server
+|/  
+* 2c19142 fixed #175
+*   044ba4d Merge pull request #168 from Youplala/patch-1
+|\  
+| * 53bf1aa Fix typo
+|/  
+* e3096e5 update web
+* 833d0d7 dynamic api_endpoint; fixed #162
+*   f1ad4a6 Merge pull request #159 from WangShaoyu1/patch-1
+|\  
+| * 4cc4a96 Update home.vue
+|/  
+*   eee74ec Merge pull request #156 from Toubat/prompt-flow-diagram
+|\  
+| * 27b218e add general prompt flow diagram for ease of understanding
+|/  
+* 3cec85d support azure and gpt4 #135
+| * ea43674 Revert "Migrate code to modern es6 syntax (#124)"
+|/  
+* 8d925aa Support for environment variable API keys (#120)
+* 92c0d55 Migrate code to modern es6 syntax (#124)
+* 367eef3 fixed #114
+* c6e60fc hard-coded base url fixed #116
+* 82d1516 update README.md
+* 247dd16 cors fixed
+* 0bdc984 mp to mt; change server ip in web
+* b29fb62 openaikey fixed
+* e9e7320 Fallback to config OpenAI API key (#96)
+* 0551cc1 hf space demo; rename some configs
+* cc3179e Update README.md
+* bc66e5a fixed #50; reduced local deployments
+* 766e44b Minor Improvements to js syntax in `web` folder (#57)
+* e69277f General improvements to `CONTRIBUTING.MD` (#55)
+*   e7792fd Merge pull request #34 from HardwayLinka/dev
+|\  
+| * af7ab7d addressed two comments
+| *   c37cf21 Merge branch 'microsoft:main' into dev
+| |\  
+| |/  
+|/|   
+* |   61148f5 Merge pull request #52 from ErikDombi/windows-download-script
+|\ \  
+| * | 88fc60e Added a Powershell script to download the models on Windows machines
+* | | 0f483c2 Minor Improvements (#49)
+|/ /  
+* | e6d1208 update README.md
+* | 8774114 u3; fixed #42
+| *   f69d172 Merge branch 'microsoft:main' into dev
+| |\  
+| |/  
+|/|   
+* |   1b73516 Merge pull request #43 from julien-c/prompt-tweaks
+|\ \  
+| * | a0fd1f1 tweak prompts
+|/ /  
+| * 3ccc8c5 fixed 'WARNING: The NVIDIA Driver was not detected. GPU functionality will not be available'
+| * 93bbe1e changed base image
+| * 305e01f added a dockerfile
+|/  
+* 7b02473 cookies to token
+* 4caa8aa added gradio
+* 2a430ff update .cff
+* b016ac6 reduced local models
+*   e82bd1f Merge pull request #5 from eltociear/patch-1
+|\  
+| * 3f1298d Update README.md
+* |   6b645f2 Merge pull request #14 from EwoutH/citation-file
+|\ \  
+| * | 4abfae4 Add CITATION.cff file to make it easy to cite JARVIS
+* | |   902ebff Merge pull request #25 from ManoBharathi93/patch-1
+|\ \ \  
+| * | | 9bec0ca added specific repository link
+| * | | 64d57e3 added contribution file
+* | | | 86e4048 route text-generation to LLM
+|/ / /  
+* | |   8d4291d Merge pull request #12 from Aryanutkarsh/main
+|\ \ \  
+| * \ \   2eaadf3 Merge branch 'main' into main
+| |\ \ \  
+| |/ / /  
+|/| | |   
+* | | | 4888719 multi mode
+| * | |   2f8d7c1 Merge branch 'main' into main
+| |\ \ \  
+| |/ / /  
+|/| | |   
+* | | | 7ee2ee8 lightweight experience
+| |/ /  
+|/| |   
+* | |   62d09e4 Merge pull request #13 from 0xcha05/main
+|\ \ \  
+| * | | 4120035 optimised a block of code
+* | | | cc6a2de Update README.md
+|/ / /  
+| * / c110edb Fixed Grammatical mistakes for better Readability.
+|/ /  
+* |   e49148e Merge pull request #8 from ovikk/main
+|\ \  
+| * | 607dd2e Add missing models
+|/ /  
+* / d0b1667 u2
+|/  
+* ecd951e first commit
+*   57c1443 Merge pull request #1 from tan-xu/patch-1
+|\  
+| * 86799fe Update README.md
+|/  
+* 66ad0c2 readme
+* b5c079f SUPPORT.md committed
+* 1d09a19 SECURITY.md committed
+* aa9c785 LICENSE updated to template
+* b5cc003 README.md updated to template
+* be3b3ba CODE_OF_CONDUCT.md committed
+* 4cdf3e9 Initial commit
+=====================================================
+    
